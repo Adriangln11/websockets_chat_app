@@ -4,9 +4,6 @@ const Socketio = require('socket.io')
 
 const app = express()
 app.set('port', process.env.PORT || 3000)
-app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views'))
-app.use(require('express-ejs-layouts'))
 
 app.use(require('morgan')('dev'))
 app.use(express.static(path.join(__dirname, 'public')))
